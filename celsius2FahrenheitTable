@@ -1,0 +1,16 @@
+//Author: Chisha
+//Student ID: 2019043041
+//Instructor: Mbewe Phyela
+//Description: Generates a table with calculated Fahrenheit from 0-20 degrees. 
+public class celsius2FahrenheitTable
+{
+   public static void main (String [] args)
+   {
+   double F;//Declares F(fahrenheit) as an Integer variable
+   for(double C = 0; C <= 20; C++){//Creates a loop from 0 to 20
+      F = (C * 9/5) + 32;//Formula for calculating Fahrenheit
+      System.out.println(C + "°C = " + F + "°F");// Output
+   }
+   }
+}
+//End of program....
