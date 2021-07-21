@@ -1,0 +1,29 @@
+//Author: Chisha
+//Student ID: 2019043041
+//Instructor: Mbewe Phyela
+//Description: Picks out the largest and smallest integers 
+import java.util.*;// Imports util class
+public class largestAndSmallestIdentfier
+{
+   public static void main (String [] args)
+   {
+   Scanner input = new Scanner (System.in);//Creates scanner 
+   int userInput = input.nextInt();//Decalres scanner 
+         int largest = userInput;//Declares largest
+         int smallest = userInput;//Declares smallest
+      while(userInput != -99){//Creates a while loop
+        userInput = input.nextInt();
+        if(userInput != -99){//If loop(Proceeds when userInput != -99)
+        if(userInput > smallest){//If loop(userInput > smallest)
+            largest = userInput;
+            }
+            else{
+            smallest = userInput;
+            }
+      }   
+      }
+      System.out.println("The largest integer is: " + largest);//Output
+      System.out.println("The smallest integer is: " + smallest);//Output
+   }
+}
+//End of program...
