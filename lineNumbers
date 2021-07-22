@@ -1,0 +1,26 @@
+//Author: Chisha
+//Student ID: 2019043041
+//Instructor: Mbewe Phyela
+//Description: Ask user for txt file, numbers every line of the content in the file
+import java.util.*;//Imports util package
+import java.io.*;//Imports io package
+public class lineNumbers
+{
+   public static void main (String [] args) throws IOException
+   {
+   Scanner input = new Scanner (System.in);//Declares Scanner
+   System.out.println("Input name of file");//Message for user
+   String file = input.nextLine();//Collects users input
+      Scanner fileCon = new Scanner(new FileReader(file + ".txt"));//Scans file
+      String row = "";//Declares string
+      int num = 1; //Declares and initializes an int variable
+      
+         while( fileCon.hasNextLine()){ //Creates a while loop
+         row = fileCon.nextLine();  //Initializes row
+         System.out.println(num + ": " + row);//Output
+         num++;// Increaments num by 1
+         }
+      
+   }
+}
+//End of Program....
