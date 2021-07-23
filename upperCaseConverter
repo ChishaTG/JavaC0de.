@@ -1,0 +1,36 @@
+//Author: Chisha
+//Student ID: 2019043041
+//Instructor: Mbewe Phyela
+//Description: Ask user for two txt file name, one to be read and the other to be written to. reads the file then prints the characters to the other file in uppercase.
+import java.io.*;//Imports io class
+import java.util.*;//Imports util class
+
+public class upperCaseConverter
+{
+   public static void main (String [] args) throws IOException
+   {
+   Scanner input1 = new Scanner(System.in);//Declares Scanner
+   System.out.println("Input name file to be read from:");//message for user 
+   String read = input1.nextLine();//Initializes read
+   
+   Scanner input2 = new Scanner(System.in);//Declares Scanner
+   System.out.println("Input name file to be written to:");//message for user 
+   String write = input2.nextLine();//Initializes write
+   
+   Scanner fileCon = new Scanner(new FileReader(read + ".txt"));//Initializes fileCon
+      String row = "";//Declares row
+      
+   PrintWriter pw = new PrintWriter(write + ".txt");//Declares prints writter and feeds it a file name
+   
+   while( fileCon.hasNextLine()){ //Creates loop
+         row = fileCon.nextLine(); //Initializes row
+         String x = row.toUpperCase();//Converts to uppercase
+         pw.println(x); //Writes to file
+         }
+         pw.close();//Stops writing to file
+         fileCon.close();// Stops reading file
+
+   System.out.println("Operation Complete.");//user message
+   }
+}
+//End of program...
