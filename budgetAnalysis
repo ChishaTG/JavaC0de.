@@ -1,0 +1,44 @@
+//Author: Chisha
+//Student ID: 2019043041
+//Instructor: Mbewe Phyela
+//Description: This program asks user to enter the amount that he or she has budgeted for a month. 
+//It then promts the user to enter each of his or her expenses for the month, and keeps running the total.
+// When the user is done, the program will display whether the budget is less or over the required.
+import java.util.*;// Imports the util package
+public class budgetAnalysis
+{
+   public static void main (String [] args)
+   {
+   Scanner input1 = new Scanner (System.in);//Declares Scanner
+   Scanner input2 = new Scanner (System.in);//Declares Scanner
+   System.out.println("Enter amount Budgeted for this Month.");// Message for user
+   double monthBud = input1.nextDouble();//Declares and initializes monthBud
+   double total = 0;//Declares and initializes total
+   double expense = 0;//Declares and initializes expense
+      
+      while(expense != -99){//Creates loop
+      System.out.println("Enter expense. (If there is no more expense, enter -99).");// Message for user
+      expense = input2.nextDouble();//Changes values for espense
+         if(expense != -99){// Creates a nested loop
+         total = total + expense;//Changes value of total
+         }
+         else{
+         break;//Ends loop
+         }
+         
+      }
+      
+         double balance = monthBud - total;//Declares and initializes balance
+         
+            if(balance > 0){//Creates lo
+            System.out.println("Your mothly budget has Extra " + balance + "Kwacha");// Message for user
+            }
+            else{
+            System.out.println("Your mothly budget is Less " + (balance * -1) + "Kwacha");// Message for user
+            }
+      
+            
+            
+   }
+}
+//End of program
