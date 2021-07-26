@@ -1,0 +1,37 @@
+//Author: Chisha
+//Student ID: 2019043041
+//Instructor: Mbewe Phyela
+//Description: This program generates a random number and asks the user to guess the number.
+//If the users guess is high, it prints "Too high, try again."
+//If the users guess is low, it prints "Too low, try again."
+import java.util.*;//Inports util class
+
+public class randomNumberGuessingGame
+{
+   public static void main (String [] args)
+   {
+   Random rnd = new Random();//Declares rnd
+   int num = rnd.nextInt();//Generates a random number
+   int userInput = 0;//Initializes and declares userInput
+   //System.out.println(num);
+   
+         do{//Creates loop
+         Scanner input = new Scanner (System.in);//Declares scanner
+         System.out.println("Guess the random Number.");//Message for user
+         userInput = input.nextInt();//takes in users guess
+            
+            if(userInput > num){//Creates loop
+            System.out.println("Too high, try again.");//Message for user
+            }
+            else if(userInput < num){
+            System.out.println("Too low, try again.");//Message for user
+            }
+            else{
+            System.out.println("Correct");//Message for user
+            }
+         
+         }while(userInput != num);
+   
+   }
+}
+//End of program....
